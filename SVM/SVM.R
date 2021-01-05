@@ -1,3 +1,5 @@
+library(e1071)
+
 # load the dataset with improved names
 setwd('/home/benjamin/WS20_21/machine_learning_2/ML_Project/')
 df <- read.csv('cmc_mod.data')
@@ -52,3 +54,4 @@ pred_val <- predict(svm_model, x_val)
 class_matrix <- table(pred_val, y_val)
 acc <- sum(diag(class_matrix))/sum(class_matrix); acc
 }
+
