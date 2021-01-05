@@ -1,7 +1,7 @@
-# Short Dataset Description
+# Short Data Set Description
 
 ## Synopsis
-We chose the Contraceptive Method Choice Data Set from the UcI Machine Learning Repository at the Center for Machine Learning and Intelligent Systems. The data set is a subset of a Contraceptive Prevalence Survey from 1987 in Indonesia. The test subjects were married women who were not pregnant or they did not know if the were pregnant.  
+We chose the Contraceptive Method Choice Data Set from the UCI Machine Learning Repository at the Center for Machine Learning and Intelligent Systems. The data set is a subset of a Contraceptive Prevalence Survey from 1987 in Indonesia. The test subjects were married women who were not pregnant or they did not know if the were pregnant.  
 
 ## Variables
 
@@ -11,7 +11,7 @@ The target variable is the current contraceptive method choice. The are 3 option
 - long-term methods  
 - short-term methods  
 
-Thus the target varibale is categorical. There are in total 9 predictor variables:
+Thus the target variable is categorical. There are in total 9 predictor variables:
 
 - Wife's age (numerical)
 - Wife's education (categorical) 1=low, 2, 3, 4=high
