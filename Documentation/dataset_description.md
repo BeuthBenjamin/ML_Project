@@ -25,4 +25,8 @@ Thus the target variable is categorical. There are in total 9 predictor variable
 
 ## tSNE Plot
 
-It is interesting to see if it is possible for the tSNE algorithm to separate the data in a two dimensional plane. If this is possible, then we expect a high accuracy for our classification algorithms.
+It is interesting to see if it is possible for the tSNE algorithm to separate the data in a two dimensional plane. If this is possible, then we expect a high accuracy for our classification algorithms. Here you can see the plot:
+
+![](tSNE_plot.png)
+
+Sadly the tSNE algorithm was not able to differentiate the the groups. It looks like it is not easy to find a 2 dim representation that is able to seperate the data.
