@@ -1,4 +1,4 @@
-# Mathmatical Overview Support Vector Machine
+# Mathematical Overview Support Vector Machine
 
 ## Maximal Margin Classifier
 This is the most basic building block of the the support vector machine.  
