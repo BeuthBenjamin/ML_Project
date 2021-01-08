@@ -7,12 +7,12 @@ variables. Also we assume the our classification task is linearly seperable.
 This means, that there exists a line, which separates the total data correctly.
 This raises the question: how do we find this line?  
 A general line can be defined with the following equation:  
-![](linear_equation.png)  
+![](imgs/svm/linear_equation.png)  
 Now the question is, how do we find the best line that separarates the data?
 If we know the value of beta it is easy the classify the data, if the result of
 the equation is positiv it belongs to class 1, and otherwise to class 2.  
 The best values of beta are found if you solve the following equation:
-![](maximin.png)  
+![](imgs/svm/maximin.png)  
 
 ## Support Vector Classifier
 However real problems are not often lineary separable. What do we do, if the 
@@ -20,7 +20,7 @@ problem is more difficult, but still linear?
 We need to allow some points to go over the margin. To achieve this we can
 introduce slack variables for every observation called epsilon.
 Then we have to solve the following problem:  
-![](svc.png)  
+![](imgs/svm/svc.png)  
 
 ## Support Vector Machine
 Reality is sadly not often linear. A SVM tackles the problem to classify data
@@ -30,6 +30,6 @@ We take the data from the original space and transform it to a higher
 dimensional space. We hope to find a linear separation in the higher dimensional
 space. This transformed problem is then solved with a Support Vector Classifier.
 We use the following formula to transform the data:  
-![](svm.png)  
+![](imgs/svm/svm.png)  
 K is the kernel function and is in our case a polynomial kernel function:  
-![](poly_kernel.png)  
+![](imgs/svm/poly_kernel.png)  
