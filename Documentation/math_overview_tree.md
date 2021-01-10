@@ -1,11 +1,3 @@
----
-geometry: "left=2cm,top=3cm,right=2cm,bottom=3cm"
-output: 
-  pdf_document:
-    keep_tex: true
-    keep_md: true
----
-
 # Mathematical Overview Decision Tree
 Decision trees are a predictive model that function through segmenting the
 predictor space into a small number of simple non-overlapping regions
