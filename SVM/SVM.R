@@ -3,19 +3,6 @@ library(e1071)
 # import data
 source("Data/import.R")
 
-# train, validation, test split as required
-set.seed(2021)
-idx <-
-  sample(
-    seq(1, 3),
-    size = nrow(data),
-    replace = TRUE,
-    prob = c(0.6, 0.2, 0.2)
-  )
-train <- data[idx == 1,]
-validation <- data[idx == 2,]
-test <- data[idx == 3,]
-
 # train a SVM
 cost_param <- 10
 {
