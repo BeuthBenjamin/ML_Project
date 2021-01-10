@@ -34,21 +34,9 @@ library(plyr)
 #   init
 # }
 
-# Read data ####
+# Read & Split Data ####
 
 source("Data/import.R")
-
-# Split Data ####
-
-set.seed(2020)
-n <- nrow(data)
-train.split <- sample(1:n, n * 0.6)
-validation.split <- sample((1:n)[-train.split], n * 0.2)
-test.split <- (1:n)[-c(train.split, validation.split)]
-
-train <- data[train.split]
-validation <- data[validation.split]
-test <- data[test.split]
 
 train_model <- function(minsize) {
   # Train model ####
