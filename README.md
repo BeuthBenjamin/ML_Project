@@ -34,7 +34,7 @@ The target variable is therefore categorical. There are in total 9 predictor var
 
 It is interesting to see if it is possible for the tSNE algorithm to transform the data into a two-dimensional plane. If this is possible, then we expect a high accuracy for our classification algorithms. Here you can see the plot:
 
-![](Documentation/tSNE_plot.png)
+![](Documentation/imgs/tSNE_plot.png)
 
 Sadly the tSNE algorithm was not able to differentiate the groups. It looks like it is not easy to find a two-dimensional representation that is able to separate the data.
 
@@ -213,7 +213,7 @@ To create the best possible tree, the best value for the `minsize` parameter mus
 #### Result
 
 The tree that emerges after the previous steps contains a total of 6 terminal nodes. The optimal `minsize` value is 7. The overall accuracy of the tree based on the validation data is 52%. Since there are 3 result classes, the accuracy with random guessing would be 33%. Thus, the model has learned something and is better than the random guess. However, it's far from being good. The tree can be seen in the picture below.
-![Tree](Documentation/tree.png)
+![Tree](Documentation/imgs/tree.png)
 
 The distribution of the results of the validation data can be seen in the table below.
 
