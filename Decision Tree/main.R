@@ -38,10 +38,10 @@ library(plyr)
 
 source("Data/import.R")
 
-train_model <- function(minsize) {
+train_model <- function(data, minsize) {
   # Train model ####
   tree.data <- tree(ContraceptiveMethodUsed ~ .,
-                    train,
+                    data,
                     mindev = 0,
                     minsize = minsize)
 
@@ -63,19 +63,23 @@ calculate_accuracy <- function(model, data){
 # Find best minsize
 vals <- 1:25
 for (i in vals){
-  pruned <- train_model(i)
+  pruned <- train_model(train, i)
   vals[i] <- calculate_accuracy(pruned, validation)[1]
 }
 best <- which.max(vals)
 print(paste("Best minsize for Tree:",best))
 
-pruned <- train_model(best)
-print(summary(pruned))
-plot(pruned)
-text(pruned)
-print("Best Validation Result")
-print(calculate_accuracy(pruned, validation))
+# train our final model with both validation and training data
+final_tree_model <- train_model(train_and_validation, best)
+print(summary(final_tree_model))
+plot(final_tree_model)
+text(final_tree_model)
 
 # Test model ####
 print("Test Data Result")
-print(calculate_accuracy(pruned, test))
+print(calculate_accuracy(final_tree_model, test))
+
+confusionMatrix(
+  predict(final_tree_model, subset(test, select = -ContraceptiveMethodUsed), type='class'),
+  test$ContraceptiveMethodUsed
+)
